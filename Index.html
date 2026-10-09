@@ -1,0 +1,693 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Светлана Залавина — Executive коуч MCC ICF</title>
+    <meta name="description" content="Executive коуч MCC ICF. 2700+ часов практики. Детско-родительский коучинг, подготовка к сертификации ICF, менторинговая коуч-группа.">
+    <style>
+        /* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --color-bg: #f9f7f4;
+            --color-surface: #ffffff;
+            --color-text: #1a1a1a;
+            --color-text-light: #5a5a5a;
+            --color-accent: #8b7355;
+            --color-accent-light: #a8917a;
+            --color-border: #e8e2db;
+            --radius: 12px;
+            --max-width: 1100px;
+            --font-main: 'Georgia', 'Times New Roman', serif;
+            --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+            a:hover {
+                color: var(--color-accent-light);
+            }
+
+        /* ===== КОНТЕЙНЕР ===== */
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== ШАПКА ===== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(249, 247, 244, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-family: var(--font-main);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-text);
+            letter-spacing: 0.02em;
+        }
+
+            .logo span {
+                color: var(--color-accent);
+            }
+
+        nav ul {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        nav a {
+            font-size: 0.92rem;
+            color: var(--color-text-light);
+            font-weight: 500;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+        }
+
+            nav a:hover {
+                color: var(--color-accent);
+            }
+
+        /* ===== БУРГЕР-МЕНЮ (мобильные) ===== */
+        .burger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 4px;
+        }
+
+            .burger span {
+                display: block;
+                width: 24px;
+                height: 2px;
+                background: var(--color-text);
+                transition: 0.3s;
+                border-radius: 2px;
+            }
+
+        /* ===== ГЛАВНЫЙ ЭКРАН ===== */
+        .hero {
+            padding: 80px 0 80px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-main);
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 400;
+            line-height: 1.25;
+            margin-bottom: 24px;
+            color: var(--color-text);
+        }
+
+            .hero-text h1 strong {
+                font-weight: 700;
+                color: var(--color-accent);
+            }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            color: var(--color-text-light);
+            margin-bottom: 36px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            object-fit: cover;
+            aspect-ratio: 4/5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 36px;
+            background: var(--color-accent);
+            color: #fff;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+            .btn:hover {
+                background: var(--color-accent-light);
+                color: #fff;
+                transform: translateY(-2px);
+            }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+        }
+
+            .btn-outline:hover {
+                background: var(--color-accent);
+                color: #fff;
+            }
+
+        /* ===== СЕКЦИИ ===== */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-family: var(--font-main);
+            font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 48px;
+            color: var(--color-text);
+        }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 48px;
+                height: 2px;
+                background: var(--color-accent);
+                margin: 16px auto 0;
+            }
+
+        /* ===== КАРТОЧКИ КУРСОВ ===== */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            transition: box-shadow 0.3s, transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .card:hover {
+                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
+                transform: translateY(-4px);
+            }
+
+            .card h3 {
+                font-family: var(--font-main);
+                font-size: 1.25rem;
+                font-weight: 600;
+                margin-bottom: 12px;
+                color: var(--color-text);
+            }
+
+            .card .format {
+                font-size: 0.85rem;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+                color: var(--color-accent);
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+
+            .card ul {
+                list-style: none;
+                margin: 16px 0;
+                flex: 1;
+            }
+
+                .card ul li {
+                    position: relative;
+                    padding-left: 20px;
+                    margin-bottom: 10px;
+                    font-size: 0.92rem;
+                    color: var(--color-text-light);
+                    line-height: 1.5;
+                }
+
+                    .card ul li::before {
+                        content: '•';
+                        position: absolute;
+                        left: 0;
+                        color: var(--color-accent);
+                        font-weight: 700;
+                    }
+
+                    .card ul li strong {
+                        color: var(--color-text);
+                        font-weight: 600;
+                    }
+
+            .card .price {
+                margin-top: 20px;
+                font-weight: 700;
+                font-size: 1.2rem;
+                color: var(--color-accent);
+                border-top: 1px solid var(--color-border);
+                padding-top: 16px;
+            }
+
+            .card .meta {
+                font-size: 0.85rem;
+                color: var(--color-text-light);
+                margin-top: 4px;
+            }
+
+        /* ===== ОБО МНЕ ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .about-text p {
+            margin-bottom: 16px;
+            color: var(--color-text-light);
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+            .about-list li {
+                padding: 10px 0;
+                border-bottom: 1px solid var(--color-border);
+                font-size: 0.95rem;
+                display: flex;
+                align-items: baseline;
+                gap: 10px;
+            }
+
+                .about-list li::before {
+                    content: '—';
+                    color: var(--color-accent);
+                    font-weight: 700;
+                    flex-shrink: 0;
+                }
+
+        /* ===== СТАТИСТИКА ===== */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 48px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: var(--font-main);
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--color-accent);
+            line-height: 1.1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            margin-top: 4px;
+        }
+
+        /* ===== ОТЗЫВЫ ===== */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+
+        .testimonial {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 32px 28px;
+            position: relative;
+        }
+
+            .testimonial::before {
+                content: '“';
+                font-family: var(--font-main);
+                font-size: 4rem;
+                color: var(--color-accent);
+                opacity: 0.25;
+                position: absolute;
+                top: 12px;
+                left: 20px;
+                line-height: 1;
+            }
+
+            .testimonial p {
+                font-style: italic;
+                color: var(--color-text-light);
+                font-size: 0.95rem;
+                position: relative;
+                z-index: 1;
+            }
+
+            .testimonial .author {
+                margin-top: 16px;
+                font-weight: 600;
+                font-style: normal;
+                color: var(--color-text);
+            }
+
+        /* ===== ФОРМА ===== */
+        .contact-form {
+            max-width: 560px;
+            margin: 0 auto;
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 40px 36px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+            .form-group label {
+                display: block;
+                font-size: 0.88rem;
+                font-weight: 600;
+                margin-bottom: 6px;
+                color: var(--color-text);
+            }
+
+                .form-group label .req {
+                    color: #c0392b;
+                }
+
+            .form-group input,
+            .form-group textarea {
+                width: 100%;
+                padding: 12px 16px;
+                border: 1px solid var(--color-border);
+                border-radius: 8px;
+                font-family: var(--font-body);
+                font-size: 0.95rem;
+                background: var(--color-bg);
+                color: var(--color-text);
+                transition: border-color 0.3s;
+            }
+
+                .form-group input:focus,
+                .form-group textarea:focus {
+                    outline: none;
+                    border-color: var(--color-accent);
+                }
+
+            .form-group textarea {
+                resize: vertical;
+                min-height: 100px;
+            }
+
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            margin-bottom: 24px;
+        }
+
+            .form-checkbox input {
+                margin-top: 3px;
+                flex-shrink: 0;
+                width: auto;
+            }
+
+        /* ===== ФУТЕР ===== */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+        }
+
+        /* ===== АДАПТИВНОСТЬ ===== */
+        @media (max-width: 900px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-image img {
+                margin: 0 auto;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--color-bg);
+                flex-direction: column;
+                padding: 20px 24px;
+                gap: 16px;
+                border-bottom: 1px solid var(--color-border);
+            }
+
+                nav ul.open {
+                    display: flex;
+                }
+
+            .burger {
+                display: flex;
+            }
+
+            .hero {
+                padding: 64px 0 48px;
+            }
+
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .contact-form {
+                padding: 28px 20px;
+            }
+
+            section {
+                padding: 56px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">Светлана <span>Залавина</span></div>
+            <button class="burger" aria-label="Меню" onclick="document.querySelector('nav ul').classList.toggle('open')">
+                <span></span><span></span><span></span>
+            </button>
+            <nav>
+                <ul>
+                    <li><a href="#child-parent-coaching">Детско-родительский коучинг</a></li>
+                    <li><a href="#about">Обо мне</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <h1>
+                        Коуч смыслов, помогающий предпринимателям и подросткам снова найти себя, когда "я" пропало
+                    </h1>
+                    <p><strong>Без идеалов, то есть без определенных хоть сколько-нибудь желаний лучшего, никогда не может получиться никакой хорошей действительности. </strong>(Достоевский Ф.М.)</p>
+                    <a href="#contact" class="btn">Связаться со мной</a>
+                </div>
+                <div class="hero-image">
+                    <!-- Замените main-photo.jpg на имя вашего файла с фото -->
+                    <img src="main-photo.jpg" alt="Светлана Залавина">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДЕТСКО-РОДИТЕЛЬСКИЙ КОУЧИНГ 2026 -->
+    <section id="child-parent-coaching">
+        <div class="container">
+            <h2 class="section-title">Курс «Детско-родительский коучинг 2026»</h2>
+            <div class="cards">
+
+                <!-- Тариф 1 -->
+                <div class="card">
+                    <div class="format">Онлайн-практикум 2 часа</div>
+                    <h3>Для родителя и для коуча</h3>
+                    <ul>
+                        <li><strong>Тема 1.</strong> Три сферы «точек болей — точек роста»</li>
+                        <li><strong>Тема 2.</strong> Основы возрастной психологии для коучей: периодизация Л.С. Выготского и Д.Б. Эльконина, ведущая деятельность, стадии развития мозга, нейрофизиология. <em>Шпаргалка.</em></li>
+                        <li><strong>Тема 3.</strong> Основы патопсихологии: симптомы депрессий, зависимости, тревожных расстройств. <em>Шпаргалка — тест на депрессию.</em></li>
+                        <li><strong>Тема 4.</strong> Варианты учебного пути: школа, среднее и высшее образование. <em>Шпаргалка — ссылки по школам и вузам.</em></li>
+                        <li><strong>Тема 5.</strong> Групповой коучинг (в записи, с практическим заданием)</li>
+                    </ul>
+                    <div class="price">14 000 ₽</div>
+                </div>
+
+                <!-- Тариф 2 -->
+                <div class="card">
+                    <div class="format">Практикум онлайн 2 часа</div>
+                    <h3>Для коуча</h3>
+                    <ul>
+                        <li><strong>Тема 1.</strong> Введение в детско-родительский коучинг: виды, запросы от родителей и детей, нейропсихологические возрастные ограничения. <em>Шпаргалка — опросник «готова ли семья к коучингу?»</em></li>
+                        <li><strong>Тема 2.</strong> Договор с родителем и ребенком: логистика первой консультации, устный и письменный договор. <em>Шпаргалка — трехстороннее соглашение и согласие на персональные данные.</em></li>
+                        <li><strong>Тема 3.</strong> Фокус коучинга в «родительском» запросе: разделение ответственности, критерии результата, личностное своеобразие. <em>Шпаргалки — «сильные вопросы» и демо-сессия.</em></li>
+                        <li><strong>Тема 4.</strong> Фокус коучинга в «детском» запросе: партнерская позиция, соглашения, стратегия, встраивание в систему. <em>Шпаргалки — «сильные вопросы» подростку и демо-сессия.</em></li>
+                        <li><strong>Тема 5.</strong> Групповой менторинг по родительскому/подростковому коучингу (в записи, с практическим заданием)</li>
+                    </ul>
+                    <div class="price">21 000 ₽</div>
+                </div>
+
+                <!-- Тариф 3 -->
+                <div class="card">
+                    <div class="format">Практикум онлайн 2 часа</div>
+                    <h3>Для коуча-профориентолога</h3>
+                    <ul>
+                        <li><strong>Тема 1.</strong> Профориентационный коучинг для клиента-подростка: определение, особенности современной ситуации, ошибки, концепция Икигай. <em>Шпаргалка — «сильные вопросы» профориентации.</em></li>
+                        <li><strong>Тема 2.</strong> Методика профориентационного тестирования: обоснование инструментов, логистика, интерпретация результатов, написание рекомендаций. <em>Шпаргалка — бланк и инструмент по расчету тестов.</em></li>
+                        <li><strong>Тема 3.</strong> Методика проведения профориентационной встречи по результатам теста</li>
+                        <li><strong>Тема 4.</strong> Онлайн-встреча по профориентационному тесту</li>
+                    </ul>
+                    <div class="price">14 000 ₽</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ОБО МНЕ -->
+    <section id="about" style="background: var(--color-surface);">
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p><strong>Коучинг для меня</strong> — это не про мотивацию “встать и идти”, а про понимание, куда и зачем идти.</p>
+                    <p>Это четкая методология и инструменты, основанные на философии и научной базе.</p>
+                    <p>Их можно применять в любой сфере жизни — от отношений до карьеры.</p>
+                </div>
+                <div>
+                    <h3 style="font-family: var(--font-main); font-size: 1.2rem; margin-bottom: 20px;">Ключевые компетенции</h3>
+                    <ul class="about-list">
+                        <li>Коуч высшей международной категории MCC ICF</li>
+                        <li>Психолог-консультант</li>
+                        <li>Автор первого учебного пособия «Психологические и нейрофизиологические основы коучинга»</li>
+                        <li>Директор по продукту «Коучинг» в Академии-резиденте Сколково</li>
+                        <li>Автор и преподаватель программ повышения квалификации для коучей</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- КОНТАКТЫ -->
+    <section id="contact" style="background: var(--color-surface);">
+        <div class="container">
+            <h2 class="section-title">У вас остались вопросы?</h2>
+            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 36px; max-width: 520px; margin-left: auto; margin-right: auto;">Свяжитесь со мной — я отвечу лично.</p>
+
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('Спасибо! Форма отправлена.'); this.reset();">
+                <div class="form-group">
+                    <label for="name">Ваше имя <span class="req">*</span></label>
+                    <input type="text" id="name" name="name" required placeholder="Как к вам обращаться">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон <span class="req">*</span></label>
+                    <input type="tel" id="phone" name="phone" required placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail <span class="req">*</span></label>
+                    <input type="email" id="email" name="email" required placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Сообщение <span class="req">*</span></label>
+                    <textarea id="message" name="message" required placeholder="Расскажите, какой вопрос вас интересует"></textarea>
+                </div>
+                <div class="form-checkbox">
+                    <input type="checkbox" id="agree" required>
+                    <label for="agree">Я согласен(на) на обработку персональных данных</label>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ФУТЕР -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Светлана Залавина. Executive коуч MCC ICF.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
