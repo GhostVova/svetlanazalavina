@@ -6,7 +6,7 @@
     <title>Светлана Залавина — Executive коуч MCC ICF</title>
     <meta name="description" content="Executive коуч MCC ICF. 2700+ часов практики. Детско-родительский коучинг, подготовка к сертификации ICF, менторинговая коуч-группа.">
     <style>
-        /* ===== СБРОС И БАЗОВЫЕ СТИЛИ ===== */
+        //сброс, базовые стили
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -26,11 +26,9 @@
             --font-main: 'Georgia', 'Times New Roman', serif;
             --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: var(--font-body);
             background: var(--color-bg);
@@ -39,30 +37,27 @@
             font-size: 17px;
             -webkit-font-smoothing: antialiased;
         }
-
         img {
             max-width: 100%;
             display: block;
         }
-
         a {
             color: var(--color-accent);
             text-decoration: none;
             transition: color 0.3s;
         }
-
             a:hover {
                 color: var(--color-accent-light);
             }
 
-        /* ===== КОНТЕЙНЕР ===== */
+        //контейнер
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 0 24px;
         }
 
-        /* ===== ШАПКА ===== */
+        //шапка
         header {
             position: sticky;
             top: 0;
@@ -71,14 +66,12 @@
             backdrop-filter: blur(12px);
             border-bottom: 1px solid var(--color-border);
         }
-
         .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 16px 0;
         }
-
         .logo {
             font-family: var(--font-main);
             font-size: 1.3rem;
@@ -86,17 +79,14 @@
             color: var(--color-text);
             letter-spacing: 0.02em;
         }
-
             .logo span {
                 color: var(--color-accent);
             }
-
         nav ul {
             display: flex;
             gap: 28px;
             list-style: none;
         }
-
         nav a {
             font-size: 0.92rem;
             color: var(--color-text-light);
@@ -104,12 +94,11 @@
             letter-spacing: 0.03em;
             text-transform: uppercase;
         }
-
             nav a:hover {
                 color: var(--color-accent);
             }
 
-        /* ===== БУРГЕР-МЕНЮ (мобильные) ===== */
+        //для телефона
         .burger {
             display: none;
             flex-direction: column;
@@ -119,7 +108,6 @@
             border: none;
             padding: 4px;
         }
-
             .burger span {
                 display: block;
                 width: 24px;
@@ -129,18 +117,16 @@
                 border-radius: 2px;
             }
 
-        /* ===== ГЛАВНЫЙ ЭКРАН ===== */
+        //главный экран
         .hero {
             padding: 80px 0 80px;
         }
-
         .hero-grid {
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
             gap: 48px;
             align-items: center;
         }
-
         .hero-text h1 {
             font-family: var(--font-main);
             font-size: clamp(2rem, 4.5vw, 3rem);
@@ -149,18 +135,15 @@
             margin-bottom: 24px;
             color: var(--color-text);
         }
-
             .hero-text h1 strong {
                 font-weight: 700;
                 color: var(--color-accent);
             }
-
         .hero-text p {
             font-size: 1.1rem;
             color: var(--color-text-light);
             margin-bottom: 36px;
         }
-
         .hero-image img {
             width: 100%;
             max-width: 420px;
@@ -169,7 +152,6 @@
             object-fit: cover;
             aspect-ratio: 4/5;
         }
-
         .btn {
             display: inline-block;
             padding: 14px 36px;
@@ -184,29 +166,25 @@
             cursor: pointer;
             transition: background 0.3s, transform 0.2s;
         }
-
             .btn:hover {
                 background: var(--color-accent-light);
                 color: #fff;
                 transform: translateY(-2px);
             }
-
         .btn-outline {
             background: transparent;
             color: var(--color-accent);
             border: 2px solid var(--color-accent);
         }
-
             .btn-outline:hover {
                 background: var(--color-accent);
                 color: #fff;
             }
 
-        /* ===== СЕКЦИИ ===== */
+        //секции
         section {
             padding: 80px 0;
         }
-
         .section-title {
             font-family: var(--font-main);
             font-size: clamp(1.6rem, 3.5vw, 2.4rem);
@@ -215,7 +193,6 @@
             margin-bottom: 48px;
             color: var(--color-text);
         }
-
             .section-title::after {
                 content: '';
                 display: block;
@@ -225,13 +202,12 @@
                 margin: 16px auto 0;
             }
 
-        /* ===== КАРТОЧКИ КУРСОВ ===== */
+        //карточки курсов
         .cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 28px;
         }
-
         .card {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -241,12 +217,10 @@
             display: flex;
             flex-direction: column;
         }
-
             .card:hover {
                 box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07);
                 transform: translateY(-4px);
             }
-
             .card h3 {
                 font-family: var(--font-main);
                 font-size: 1.25rem;
@@ -254,7 +228,6 @@
                 margin-bottom: 12px;
                 color: var(--color-text);
             }
-
             .card .format {
                 font-size: 0.85rem;
                 text-transform: uppercase;
@@ -263,13 +236,11 @@
                 font-weight: 600;
                 margin-bottom: 8px;
             }
-
             .card ul {
                 list-style: none;
                 margin: 16px 0;
                 flex: 1;
             }
-
                 .card ul li {
                     position: relative;
                     padding-left: 20px;
@@ -278,7 +249,6 @@
                     color: var(--color-text-light);
                     line-height: 1.5;
                 }
-
                     .card ul li::before {
                         content: '•';
                         position: absolute;
@@ -286,12 +256,10 @@
                         color: var(--color-accent);
                         font-weight: 700;
                     }
-
                     .card ul li strong {
                         color: var(--color-text);
                         font-weight: 600;
                     }
-
             .card .price {
                 margin-top: 20px;
                 font-weight: 700;
@@ -300,30 +268,26 @@
                 border-top: 1px solid var(--color-border);
                 padding-top: 16px;
             }
-
             .card .meta {
                 font-size: 0.85rem;
                 color: var(--color-text-light);
                 margin-top: 4px;
             }
 
-        /* ===== ОБО МНЕ ===== */
+        //обо мне
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 48px;
             align-items: start;
         }
-
         .about-text p {
             margin-bottom: 16px;
             color: var(--color-text-light);
         }
-
         .about-list {
             list-style: none;
         }
-
             .about-list li {
                 padding: 10px 0;
                 border-bottom: 1px solid var(--color-border);
@@ -332,7 +296,6 @@
                 align-items: baseline;
                 gap: 10px;
             }
-
                 .about-list li::before {
                     content: '—';
                     color: var(--color-accent);
@@ -340,7 +303,7 @@
                     flex-shrink: 0;
                 }
 
-        /* ===== СТАТИСТИКА ===== */
+        //статистика
         .stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -348,7 +311,6 @@
             margin-top: 48px;
             text-align: center;
         }
-
         .stat-number {
             font-family: var(--font-main);
             font-size: 2.4rem;
@@ -356,20 +318,18 @@
             color: var(--color-accent);
             line-height: 1.1;
         }
-
         .stat-label {
             font-size: 0.9rem;
             color: var(--color-text-light);
             margin-top: 4px;
         }
 
-        /* ===== ОТЗЫВЫ ===== */
+        //отзывы
         .testimonials {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 28px;
         }
-
         .testimonial {
             background: var(--color-surface);
             border: 1px solid var(--color-border);
@@ -377,7 +337,6 @@
             padding: 32px 28px;
             position: relative;
         }
-
             .testimonial::before {
                 content: '“';
                 font-family: var(--font-main);
@@ -389,7 +348,6 @@
                 left: 20px;
                 line-height: 1;
             }
-
             .testimonial p {
                 font-style: italic;
                 color: var(--color-text-light);
@@ -397,7 +355,6 @@
                 position: relative;
                 z-index: 1;
             }
-
             .testimonial .author {
                 margin-top: 16px;
                 font-weight: 600;
@@ -405,7 +362,7 @@
                 color: var(--color-text);
             }
 
-        /* ===== ФОРМА ===== */
+        //контактная форма (сделал для вида)
         .contact-form {
             max-width: 560px;
             margin: 0 auto;
@@ -414,11 +371,9 @@
             border-radius: var(--radius);
             padding: 40px 36px;
         }
-
         .form-group {
             margin-bottom: 20px;
         }
-
             .form-group label {
                 display: block;
                 font-size: 0.88rem;
@@ -426,11 +381,9 @@
                 margin-bottom: 6px;
                 color: var(--color-text);
             }
-
                 .form-group label .req {
                     color: #c0392b;
                 }
-
             .form-group input,
             .form-group textarea {
                 width: 100%;
@@ -443,18 +396,15 @@
                 color: var(--color-text);
                 transition: border-color 0.3s;
             }
-
                 .form-group input:focus,
                 .form-group textarea:focus {
                     outline: none;
                     border-color: var(--color-accent);
                 }
-
             .form-group textarea {
                 resize: vertical;
                 min-height: 100px;
             }
-
         .form-checkbox {
             display: flex;
             align-items: flex-start;
@@ -463,14 +413,13 @@
             color: var(--color-text-light);
             margin-bottom: 24px;
         }
-
             .form-checkbox input {
                 margin-top: 3px;
                 flex-shrink: 0;
                 width: auto;
             }
 
-        /* ===== ФУТЕР ===== */
+        //футер
         footer {
             padding: 40px 0;
             border-top: 1px solid var(--color-border);
@@ -479,23 +428,20 @@
             color: var(--color-text-light);
         }
 
-        /* ===== АДАПТИВНОСТЬ ===== */
+        //адаптивность
         @media (max-width: 900px) {
             .hero-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
             }
-
             .hero-image img {
                 margin: 0 auto;
             }
-
             .about-grid {
                 grid-template-columns: 1fr;
                 gap: 32px;
             }
         }
-
         @media (max-width: 768px) {
             nav ul {
                 display: none;
@@ -509,28 +455,22 @@
                 gap: 16px;
                 border-bottom: 1px solid var(--color-border);
             }
-
                 nav ul.open {
                     display: flex;
                 }
-
             .burger {
                 display: flex;
             }
-
             .hero {
                 padding: 64px 0 48px;
             }
-
             .stats {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-
             .contact-form {
                 padding: 28px 20px;
             }
-
             section {
                 padding: 56px 0;
             }
@@ -539,7 +479,7 @@
 </head>
 <body>
 
-    <!-- ШАПКА -->
+    //шапка
     <header>
         <div class="container header-inner">
             <div class="logo">Светлана <span>Залавина</span></div>
@@ -556,7 +496,7 @@
         </div>
     </header>
 
-    <!-- ГЛАВНЫЙ ЭКРАН -->
+    //главный экран
     <section class="hero">
         <div class="container">
             <div class="hero-grid">
@@ -568,20 +508,19 @@
                     <a href="#contact" class="btn">Связаться со мной</a>
                 </div>
                 <div class="hero-image">
-                    <!-- Замените main-photo.jpg на имя вашего файла с фото -->
                     <img src="main-photo.jpg" alt="Светлана Залавина">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ДЕТСКО-РОДИТЕЛЬСКИЙ КОУЧИНГ 2026 -->
+    //программа
     <section id="child-parent-coaching">
         <div class="container">
             <h2 class="section-title">Курс «Детско-родительский коучинг 2026»</h2>
             <div class="cards">
 
-                <!-- Тариф 1 -->
+                //тариф 1
                 <div class="card">
                     <div class="format">Онлайн-практикум 2 часа</div>
                     <h3>Для родителя и для коуча</h3>
@@ -595,7 +534,7 @@
                     <div class="price">14 000 ₽</div>
                 </div>
 
-                <!-- Тариф 2 -->
+                //тариф 2
                 <div class="card">
                     <div class="format">Практикум онлайн 2 часа</div>
                     <h3>Для коуча</h3>
@@ -609,7 +548,7 @@
                     <div class="price">21 000 ₽</div>
                 </div>
 
-                <!-- Тариф 3 -->
+                //тариф 3
                 <div class="card">
                     <div class="format">Практикум онлайн 2 часа</div>
                     <h3>Для коуча-профориентолога</h3>
@@ -621,12 +560,11 @@
                     </ul>
                     <div class="price">14 000 ₽</div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- ОБО МНЕ -->
+    //обо мне
     <section id="about" style="background: var(--color-surface);">
         <div class="container">
             <h2 class="section-title">Обо мне</h2>
@@ -650,7 +588,7 @@
         </div>
     </section>
 
-    <!-- КОНТАКТЫ -->
+    //контакты (не подключено)
     <section id="contact" style="background: var(--color-surface);">
         <div class="container">
             <h2 class="section-title">У вас остались вопросы?</h2>
@@ -682,10 +620,10 @@
         </div>
     </section>
 
-    <!-- ФУТЕР -->
+    //футер
     <footer>
         <div class="container">
-            <p>© 2026 Светлана Залавина. Executive коуч MCC ICF.</p>
+            <p>© 2026 Светлана Залавина. Коуч MCC ICF.</p>
         </div>
     </footer>
 
